@@ -1,2 +1,2 @@
 #!/bin/bash
-mv -t /tmp/u *[S,C,B,S]
+mv [A-Z]* /tmp/u/
