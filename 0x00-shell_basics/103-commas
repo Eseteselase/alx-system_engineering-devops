@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -e "$(ls -1F | sed 's/[^[:alnum:]]//g' | sort -n | sed '1i. ..')"
+ls -A1 | awk '{printf("%s%s%s%s", ($0 == "." || $0 == ".." ? $0 : ($0 ~ /^[0-9A-Za-z]/ ? $0 : " " $0)), (NR == 1 ? "" : ", "), (NR % 8 == 0 ? "\n" : ""), ($0 ~ /^[A-Za-z]$/ ? "/" : ""))} END {print ""}'
