@@ -1,2 +1,2 @@
 #!/bin/bash
-0 string SCHOOL School data file > school.mgc
+echo -e "#!/usr/bin/env file\n0 string SCHOOL School data file" > school.mgc
