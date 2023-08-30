@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -A1 | awk '{printf("%s%s%s%s", ($0 == "." || $0 == ".." ? $0 : ($0 ~ /^[0-9A-Za-z]/ ? $0 : " " $0)), (NR == 1 ? "" : ", "), (NR % 8 == 0 ? "\n" : ""), ($0 ~ /^[A-Za-z]$/ ? "/" : ""))} END {print ""}'
+ls -A1 | awk '{if ($0 == "." || $0 == "..") { printf("%s", $0) } else { if ($0 ~ /^[0-9A-Za-z]/) { printf("%s", $0) } else { printf(" %s", $0) }}; printf("%s", (NR % 8 == 0 ? "\n" : "")); printf("%s", ($0 ~ /^[A-Za-z]$/ ? "/" : ""))} END {print ""}'
