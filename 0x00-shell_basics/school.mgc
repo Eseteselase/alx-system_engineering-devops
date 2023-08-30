@@ -1,2 +1,5 @@
 #!/bin/bash
-file "$1" | grep -q "School data file"
+cat > school.mgc << EOF
+#!/usr/bin/env file
+0 string SCHOOL School data file
+EOF
