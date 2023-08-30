@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$cd home_dir"
+echo "$(cd home_dir)"
