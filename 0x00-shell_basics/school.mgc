@@ -1,5 +1,4 @@
 #!/bin/bash
-cat > school.mgc << EOF
-#!/usr/bin/env file
-0 string SCHOOL School data file
-EOF
+echo "#!/usr/bin/env file
+# Magic file for School data files
+0 string SCHOOL School data file" > school.mgc
