@@ -54,8 +54,8 @@ frontend www-https
 backend www-backend
         balance roundrobin
         http-request redirect scheme https code 301 if !{ ssl_fc }
-        server 23969-web-01 3.238.230.209:80 check
-        server 23969-web-02 18.205.104.232:80 check
+        server 515518-web-01 54.83.132.20:80 check
+        server 515518-web-02 54.172.43.130:80 check
 
 backend letsencrypt-backend
         server letsencrypt 127.0.0.1:54321
@@ -64,5 +64,5 @@ backend letsencrypt-backend
 #bind *:80
 #mode http
 #balance roundrobin
-#server 23969-web-01 3.238.230.209:80 check
-#server 23969-web-02 18.205.104.232:80 check
+#server 515518-web-01 54.83.132.20:80 check
+#server 515518-web-02 54.172.43.130:80 check
